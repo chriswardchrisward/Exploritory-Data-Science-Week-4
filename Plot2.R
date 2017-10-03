@@ -7,6 +7,7 @@ plot2 <- function(){
     SCC <- readRDS("./data/Source_Classification_Code.rds")
   }
   
+  #Subset Baltimore City
   BmoreNEI <- NEI[NEI$fips=="24510",]
   BmoreEmissions <- tapply(BmoreNEI$Emissions, BmoreNEI$year, sum)
   
